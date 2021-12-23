@@ -1,0 +1,13 @@
+{% extends 'navbar.html'%}
+{% load crispy_forms_tags %}
+{% block title_block%}Edit Profile{%endblock%}
+{% block body_block %}
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token%}
+    {{form | crispy}}
+    <input type="submit" value='Submit'>
+    <br><br>
+    
+    
+</form>
+{%endblock%}
